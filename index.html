@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guadalupe Salazar | Calidad e Inocuidad Alimentaria</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tabler Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #F8FAF6;
+            color: #24430F;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: min(1200px, 90%);
+            margin: 0 auto;
+        }
+
+        /* BANNER / HERO */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #27500A 0%, #376B13 100%);
+            color: white;
+            padding: 60px 0;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(36px, 4vw, 52px);
+            line-height: 1.15;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .hero h2 {
+            font-size: clamp(18px, 1.8vw, 22px);
+            font-weight: 400;
+            color: #D8EAC4;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            font-size: clamp(15px, 1.2vw, 17px);
+            margin-bottom: 30px;
+            color: #EEF7E4;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-bottom: 35px;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .feature i {
+            font-size: 24px;
+            color: #BDE57A;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 14px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.25s ease;
+        }
+
+        .btn-primary {
+            background: #97C459;
+            color: #23450D;
+        }
+
+        .btn-primary:hover {
+            background: #AED472;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #27500A;
+            transform: translateY(-2px);
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 480px;
+            border-radius: 18px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            object-fit: cover;
+        }
+
+        /* ESTADÍSTICAS */
+        .stats {
+            background: #FFFFFF;
+            padding: 60px 0;
+            border-bottom: 1px solid #E2EAD9;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .stat-item {
+            padding: 10px 20px;
+            text-align: center;
+            border-right: 1px solid #DCE8CF;
+        }
+
+        .stat-item:last-child {
+            border-right: none;
+        }
+
+        .stat-number {
+            font-size: 44px;
+            line-height: 1;
+            font-weight: 800;
+            color: #27500A;
+            margin-bottom: 8px;
+        }
+
+        .stat-icon {
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 8px;
+        }
+
+        .stat-icon i {
+            font-size: 36px;
+            color: #3B6D11;
+        }
+
+        .stat-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #27500A;
+            margin-bottom: 4px;
+        }
+
+        .stat-text {
+            font-size: 14px;
+            line-height: 1.4;
+            color: #66705E;
+        }
+
+        /* SECCIÓN BANNER DESTACADO (PROCESOS Y PERSONAL) */
+        .highlight-banner {
+            background: #E8F2DF;
+            border-top: 1px solid #D1E3C2;
+            border-bottom: 1px solid #D1E3C2;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .highlight-content {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .highlight-content i {
+            font-size: 42px;
+            color: #376B13;
+            margin-bottom: 15px;
+        }
+
+        .highlight-content h2 {
+            font-size: clamp(22px, 2.5vw, 30px);
+            font-weight: 800;
+            color: #27500A;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .highlight-content p {
+            font-size: 17px;
+            color: #3C4D2F;
+            line-height: 1.6;
+        }
+
+        /* SERVICIOS */
+        .services {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            font-weight: 800;
+            color: #27500A;
+            margin-bottom: 15px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: #556B43;
+            max-width: 750px;
+            margin: 0 auto 50px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: #FFFFFF;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #E2EAD9;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .service-card i {
+            font-size: 40px;
+            color: #376B13;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #27500A;
+        }
+
+        .service-card p {
+            font-size: 15px;
+            color: #55604E;
+        }
+
+        /* SOBRE MÍ */
+        .about {
+            background: #EFF5EA;
+            padding: 80px 0;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 32px;
+            font-weight: 800;
+            color: #27500A;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+            color: #3C4D2F;
+            font-size: 16px;
+        }
+
+        .badge-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .badge {
+            background: #DCE8CF;
+            color: #27500A;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        /* CONTACTO */
+        .contact {
+            padding: 80px 0;
+            background: #27500A;
+            color: white;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .contact p {
+            font-size: 18px;
+            color: #D8EAC4;
+            max-width: 600px;
+            margin: 0 auto 35px;
+        }
+
+        /* RESPONSIVE */
+        @media(max-width: 900px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-image {
+                order: -1;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px 0;
+            }
+
+            .stat-item:nth-child(2) {
+                border-right: none;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media(max-width: 600px) {
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                justify-content: center;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stat-item {
+                border-right: none;
+                border-bottom: 1px solid #DCE8CF;
+                padding-bottom: 20px;
+            }
+
+            .stat-item:last-child {
+                border-bottom: none;
+            }
+        }
+
+        /* ESTILOS DEL FORMULARIO DE CONTACTO */
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .contact-header h2 {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .contact-header p {
+            font-size: 18px;
+            color: #D8EAC4;
+        }
+
+        .contact-form {
+            background: #FFFFFF;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            color: #24430F;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: #27500A;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #C8D6BB;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            transition: border-color 0.25s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #376B13;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .direct-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        @media(max-width: 900px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media(max-width: 600px) {
+            .contact-form {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div>
+                    <h1>Calidad que se demuestra.<br>Inocuidad que genera confianza.</h1>
+                    <h2>Implementación de sistemas de gestión para la industria alimentaria, PYMEs y emprendedores.</h2>
+                    <p>
+                        Acompaño a empresas, industrias y emprendedores alimentarios a profesionalizar sus procesos, cumplir normativas vigentes y superar auditorías. Trabajamos juntos para desarrollar la implementación clara de pre requisito de sistemas, tales cómo BPM, HACCP y habilitaciones, con la solidez de más de 15 años de trayectoria técnica.
+                    </p>
+
+                    <div class="features">
+                        <div class="feature"><i class="ti ti-check"></i> Implementación de BPM (GMP)</div>
+                        <div class="feature"><i class="ti ti-shield-check"></i> Implementación de HACCP</div>
+                        <div class="feature"><i class="ti ti-building-community"></i> Habilitación Nacional, Provincial y Municipal</div>
+                        <div class="feature"><i class="ti ti-school"></i> Capacitación del Personal</div>
+                    </div>
+
+                    <div class="buttons">
+                        <a href="#contacto" class="btn btn-primary">
+                            <i class="ti ti-mail"></i> Solicitar asesoramiento
+                        </a>
+                        <a href="#servicios" class="btn btn-outline">
+                            <i class="ti ti-list-check"></i> Conocer Servicios
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <img src="gestion-landing.png" alt="Control de Calidad e Inocuidad Alimentaria">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ESTADÍSTICAS / CREDIBILIDAD -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">+15</div>
+                    <div class="stat-title">Años de Experiencia</div>
+                    <div class="stat-text">En gestión para la calidad, inocuidad y mejora continua en la industria alimentaria y agroalimentaria</div>
+                </div>
+
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="ti ti-building-factory"></i></div>
+                    <div class="stat-title">Trayectoria INTI</div>
+                    <div class="stat-text">Asistencia técnica y diagnósticos desde el Instituto Nacional de Tecnología Industrial</div>
+                </div>
+
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="ti ti-award"></i></div>
+                    <div class="stat-title">BPM · HACCP · FSMA · FSSC</div>
+                    <div class="stat-text">Especialista capacitada en normativas IRAM y requerimientos de exportación FDA</div>
+                </div>
+
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="ti ti-file-certificate"></i></div>
+                    <div class="stat-title">Nacional · Provincial · Municipal</div>
+                    <div class="stat-text">Gestión integral de habilitaciones de establecimientos y productos, incluidos productos Sin TACC</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROPUESTA DE VALOR DE TRABAJO EN EQUIPO -->
+    <section class="highlight-banner">
+        <div class="container">
+            <div class="highlight-content">
+                <i class="ti ti-users"></i>
+                <h2>¿Querés que todo el personal de tu empresa sepa exactamente qué hacer y cuál es la mejor forma de hacerlo?</h2>
+                <p>
+                    Trabajando juntos podemos lograrlo. Diseñamos procedimientos claros, capacitación práctica y dinámicas de trabajo simples para que la calidad deje de ser un trámite y se transforme en la forma cotidiana de trabajar en tu planta o emprendimiento.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section class="services" id="servicios">
+        <div class="container">
+            <h2 class="section-title">Soluciones a la Medida de Tu Proyecto</h2>
+            <p class="section-subtitle">Acompañamiento integral para grandes empresas, PYMEs y emprendedores que buscan ordenar y fortalecer sus procesos, habilitar sus productos y asegurar la inocuidad.</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="ti ti-clipboard-check"></i>
+                    <h3>Implementación de BPM y HACCP</h3>
+                    <p>Diseño y puesta en marcha del Sistema de Gestión de Inocuidad (SGI). Redacción e implementación de Manuales de BPM, POES, Instructivos y Registros operativos adaptados a la realidad.</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="ti ti-building-community"></i>
+                    <h3>Habilitaciones de Establecimientos y Productos</h3>
+                    <p>Gestión completa, asesoramiento técnico y tramitación para obtener la habilitación de tu planta, cocina o producto a nivel <strong>Nacional, Provincial y Municipal</strong> (RNE, RNPA, SENASA, entre otros).</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="ti ti-search"></i>
+                    <h3>Auditorías Diagnóstico y Avance</h3>
+                    <p>Evaluación objetiva para identificar desviaciones y puntos críticos respecto normativas, decretos, Código Alimentario Argentino, exigencias de clientes o normativas FSMA (FDA) para exportación.</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="ti ti-school"></i>
+                    <h3>Capacitación de Personal y R.I.C.</h3>
+                    <p>Capacitación en manipulación higiénica de los alimentos a todo el personal que trabaje directa o indirectamente con el alimento y formación del Responsable Interno de Calidad (RIC) para gestionar la autonomía y el cumplimiento en el trabajo diario.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE MÍ -->
+    <section class="about" id="sobre-mi">
+        <div class="container">
+            <div class="about-content">
+                <div>
+                    <img src="guada-landing.png" alt="Guadalupe Salazar - Consultora en Calidad" style="width: 100%; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+                </div>
+                <div class="about-text">
+                    <h2>Sobre Mí</h2>
+                    <p>
+                        Soy <strong>Licenciada en Ciencia y Tecnología de los Alimentos</strong> (FIO) y <strong>Especialista en Seguridad Alimentaria</strong> (UNLP). Durante más de 13 años brindé asistencia técnica desde el <strong>INTI</strong> a molinos harineros, acopiadoras, agroindustrias, pymes y emprendimientos alimentarios.
+                    </p>
+                    <p>
+                        Mi objetivo es transformar la gestión en una herramienta sencilla, efectiva y sin burocracia. Trabajo mano a mano con directivos, jefes de planta y operarios para construir la cultura de la inocuidad, de forma tal que cada integrante comprenda la importancia de su rol y produzca alimentos con total seguridad.
+                    </p>
+                    <div class="badge-list">
+                        <span class="badge">Lic. UNICEN</span>
+                        <span class="badge">Ex-INTI</span>
+                        <span class="badge">Especialista UNLP</span>
+                        <span class="badge">Auditora BPM / HACCP</span>
+                        <span class="badge">Preventive Controls PCQI</span>
+                        <span class="badge">Auditor Lider FSSC22000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- SECCIÓN CONTACTO Y FORMULARIO -->
+    <section class="contact" id="contacto">
+        <div class="container contact-container">
+            <div class="contact-header">
+                <h2>¿Listos para potenciar la calidad de tu empresa o emprendimiento?</h2>
+                <p>Completá el siguiente formulario y me pondré en contacto a la brevedad para evaluar las necesidades de tu proyecto.</p>
+            </div>
+
+            <!-- FORMULARIO CONECTADO A TU EMAIL VIA FORMSUBMIT -->
+            <form class="contact-form" action="https://formsubmit.co/gsalazar.qa@gmail.com" method="POST">
+                
+                <!-- Evita captchas molestos -->
+                <input type="hidden" name="_captcha" value="false">
+                <!-- Asunto del correo que te llegará -->
+                <input type="hidden" name="_subject" value="Nueva consulta desde la Landing Page!">
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo *</label>
+                        <input type="text" id="nombre" name="Nombre" class="form-control" placeholder="Ej. Maria Gonzalez" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="empresa">Empresa / Emprendimiento</label>
+                        <input type="text" id="empresa" name="Empresa_o_Emprendimiento" class="form-control" placeholder="Ej. Molino Don Pedro">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico *</label>
+                        <input type="email" id="email" name="Email" class="form-control" placeholder="ejemplo@empresa.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono / WhatsApp</label>
+                        <input type="tel" id="telefono" name="Telefono" class="form-control" placeholder="+54 9 ...">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Consulta o detalle de lo que necesitas *</label>
+                    <textarea id="mensaje" name="Mensaje" class="form-control" rows="4" placeholder="Contame sobre tu proyecto, establecimiento o las habilitaciones que precisas..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">
+                    <i class="ti ti-send"></i> Enviar Consulta Directa
+                </button>
+            </form>
+
+            <div class="direct-links">
+                <a href="mailto:gsalazar.qa@gmail.com?subject=Consulta%20Asesoramiento%20Sistemas%20de%20Gestión" class="btn btn-outline">
+                    <i class="ti ti-mail"></i> Mail directo: gsalazar.qa@gmail.com
+                </a>
+                <a href="https://www.linkedin.com/in/guadalupe-salazar-qa" target="_blank" class="btn btn-outline">
+                    <i class="ti ti-brand-linkedin"></i> LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
